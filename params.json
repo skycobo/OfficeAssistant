@@ -1,0 +1,6 @@
+{
+  "name": "Officeassistant",
+  "tagline": "一个基于C/S架构的安卓移动办公助手！",
+  "body": "这是一个C/S架构的安卓移动办公助手，包含群聊、公告、签到、审批、预约办公室等功能。",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
