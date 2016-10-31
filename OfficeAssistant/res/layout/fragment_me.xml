@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        android:id="@+id/tv_me_vNickname"
+    	android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:text="名字:"/>
+    <TextView 
+        android:id="@+id/tv_me_nickname"
+    	android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_toRightOf="@id/tv_me_vNickname"
+   	    android:text="名字"/>
+      <TextView 
+        android:id="@+id/tv_me_vTeamID"
+    	android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/tv_me_nickname"
+   	    android:text="团队ID:"/>
+      <TextView
+        android:id="@+id/tv_me_teamID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_me_nickname"
+        android:layout_toRightOf="@id/tv_me_vTeamID"
+        android:text="暂无" />
+      
+       <TextView
+           android:id="@+id/tv_me_vTeamName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/tv_me_teamID"
+           android:text="团队名:" />
+
+       <TextView
+           android:id="@+id/tv_me_teamName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tv_me_vTeamName"
+           android:layout_below="@id/tv_me_teamID"
+           android:text="暂无" />
+      
+      
+        <Button
+           android:id="@+id/b_me_createTeam"
+           android:layout_width="wrap_content"
+   	       android:layout_height="wrap_content"
+   	       android:layout_below="@id/tv_me_teamName"
+   	       android:text="创建团队"
+   	       />
+       <Button
+           android:id="@+id/b_me_joinTeam"
+           android:layout_width="wrap_content"
+   	       android:layout_height="wrap_content"
+   	       android:layout_below="@id/b_me_createTeam"
+   	       android:text="加入团队"
+   	       />
+
+      
+</RelativeLayout>

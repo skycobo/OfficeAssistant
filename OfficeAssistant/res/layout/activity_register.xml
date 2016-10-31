@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="请输入账户名(邮箱):"/>
+   
+   <EditText 
+       android:id="@+id/et_register_account"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:maxLength="20"/>
+   
+    <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="请输入密码:"/>
+   
+   <EditText
+       android:id="@+id/et_register_pw1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:inputType="textPassword"
+       android:maxLength="12"/>
+   
+   <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="请再次输入密码:"/>
+   
+   <EditText
+       android:id="@+id/et_register_pw2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:inputType="textPassword"
+       android:maxLength="12"/>
+   
+    <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="请输入昵称:"/>
+    
+   <EditText
+       android:id="@+id/et_register_nickname"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:maxLength="9"/>
+   
+   <Button 
+       android:id="@+id/b_register_register"
+       android:layout_width="160dp"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+       android:text="注册"/>
+   
+
+</LinearLayout>

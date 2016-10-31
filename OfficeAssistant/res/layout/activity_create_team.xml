@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="请输入团队ID:"/>
+    <EditText 
+        android:id="@+id/et_createTeam_teamID"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:digits="@string/digit_letter"
+    	android:maxLength="5"
+    	android:hint="5个字符以内"/>
+     <TextView
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="请输入团队名:"/>
+    <EditText 
+        android:id="@+id/et_createTeam_teamName"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:maxLength="9"
+    	android:hint="9个字符以内"/>
+   <Button 
+       android:id="@+id/b_createTeam"
+       android:layout_width="160dp"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+       android:text="创建"/>
+    
+
+</LinearLayout>

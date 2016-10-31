@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical" >
+  
+  <com.lzz.officeassistant.notices.AddTitleLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+  </com.lzz.officeassistant.notices.AddTitleLayout>
+ 
+
+  
+  <ListView 
+      android:id="@+id/lv_notices"
+      android:layout_width="match_parent"
+	  android:layout_height="match_parent">
+
+  </ListView>
+</LinearLayout>

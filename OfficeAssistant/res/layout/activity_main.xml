@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lzz.officeassistant.MainActivity" >
+
+   <FrameLayout 
+        android:id="@+id/main_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </FrameLayout>
+    
+ 
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#F7F7F7"
+        android:orientation="horizontal" >
+        
+        <RadioButton 
+            android:id="@+id/rb_main_Notice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_horizontal|bottom"
+            android:padding="2dp"
+            android:textColor="@color/tab_selector_tv_color"
+            android:text="公告"/>
+        
+         <RadioButton 
+            android:id="@+id/rb_main_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="2dp"
+            android:textColor="@color/tab_selector_tv_color"
+            android:text="消息"/>
+         
+          <RadioButton 
+            android:id="@+id/rb_main_signIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="2dp"
+            android:textColor="@color/tab_selector_tv_color"
+            android:text="签到"/>
+          
+           <RadioButton 
+            android:id="@+id/rb_main_approve"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="2dp"
+            android:textColor="@color/tab_selector_tv_color"
+            android:text="审批"/>
+          
+           <RadioButton 
+            android:id="@+id/rb_main_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:padding="2dp"
+            android:textColor="@color/tab_selector_tv_color"
+            android:text="我"/>
+           
+       
+        
+    </RadioGroup>
+   
+</LinearLayout>
