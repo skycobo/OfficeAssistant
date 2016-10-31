@@ -45,7 +45,6 @@ public class UploadSignInInfoServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		String position = request.getParameter("position");
 		String time = request.getParameter("time");
-		System.out.println(time);
 		File file = new File("/usr/local/tomcat/webapps/OfficeAssistantServer/signin");
 		file.mkdir();
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream

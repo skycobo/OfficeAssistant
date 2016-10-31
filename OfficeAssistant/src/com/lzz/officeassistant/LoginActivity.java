@@ -136,7 +136,6 @@ public class LoginActivity extends Activity {
 						Message message = new Message();
 						message.obj = response.toString();
 						handler.sendMessage(message);
-						Log.i("tag", response);
 					}
 				}catch(Exception e){
 					e.printStackTrace();
