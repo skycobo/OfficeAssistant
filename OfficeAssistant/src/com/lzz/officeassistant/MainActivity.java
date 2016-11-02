@@ -3,6 +3,7 @@ package com.lzz.officeassistant;
 import com.lzz.officeassistant.me.MeFragment;
 import com.lzz.officeassistant.message.MessageFragment;
 import com.lzz.officeassistant.notices.NoticesFragment;
+import com.lzz.officeassistant.review.ReviewFragment;
 import com.lzz.officeassistant.signin.SignInFragment;
 
 import android.app.Activity;
@@ -23,6 +24,7 @@ public class MainActivity extends Activity {
 	MessageFragment msgFg;
 	SignInFragment siFg;
 	MeFragment meFg;
+	ReviewFragment reFg;
 	FragmentManager fm;
 	FragmentTransaction ft;
 	@Override
@@ -63,6 +65,13 @@ public class MainActivity extends Activity {
 					fm = getFragmentManager();
 					ft = fm.beginTransaction();
 					ft.replace(R.id.main_content, siFg);
+					ft.commit();
+					break;
+				case R.id.rb_main_review:
+					reFg = new ReviewFragment();
+					fm = getFragmentManager();
+					ft = fm.beginTransaction();
+					ft.replace(R.id.main_content, reFg);
 					ft.commit();
 					break;
 				case R.id.rb_main_me:

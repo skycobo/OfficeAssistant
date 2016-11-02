@@ -54,6 +54,10 @@
            android:name="com.lzz.officeassistant.message.GroupChatActivity">
         </activity>
         
+         <activity
+           android:name="com.lzz.officeassistant.review.EditReviewActivity">
+        </activity>
+        
         
 
     </application>

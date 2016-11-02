@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.lzz.officeassistant.notices.AddTitleLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    </com.lzz.officeassistant.notices.AddTitleLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="审批等待"/>
+    
+    <ListView 
+      android:id="@+id/lv_review_requester_wait"
+      android:layout_width="match_parent"
+	  android:layout_height="wrap_content">
+	</ListView>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="审批回复"/>
+    
+    <ListView 
+      android:id="@+id/lv_review_requester_response"
+      android:layout_width="match_parent"
+	  android:layout_height="wrap_content">
+	</ListView>
+    
+
+</LinearLayout>

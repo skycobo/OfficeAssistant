@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="#0099FF"
+        android:text="审批"
+        android:textColor="#fff8f8ff"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未处理"/>
+    
+    <ListView 
+      android:id="@+id/lv_review_handler_wait"
+      android:layout_width="match_parent"
+	  android:layout_height="wrap_content">
+	</ListView>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已处理"/>
+     
+    <ListView 
+      android:id="@+id/lv_review_handler_over"
+      android:layout_width="match_parent"
+	  android:layout_height="wrap_content">
+	</ListView>
+
+</LinearLayout>

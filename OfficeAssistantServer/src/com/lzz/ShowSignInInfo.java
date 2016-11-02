@@ -55,7 +55,6 @@ public class ShowSignInInfo extends HttpServlet {
 			info = info + line +"\n";
 		}
 		br.close();
-		System.out.println(info);
 		Date date  = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd");
 		if(info.substring(0,5).equals(sdf.format(date))){

@@ -58,7 +58,7 @@
             android:text="签到"/>
           
            <RadioButton 
-            android:id="@+id/rb_main_approve"
+            android:id="@+id/rb_main_review"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"

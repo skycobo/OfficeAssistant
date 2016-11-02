@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reviewTypeArray">
+        <item>请假</item>
+        <item>出差</item>
+        <item>报销</item>
+        <item>其他</item>
+    </string-array>
+    
+</resources>
