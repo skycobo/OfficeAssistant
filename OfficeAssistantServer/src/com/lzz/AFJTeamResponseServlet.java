@@ -59,7 +59,7 @@ public class AFJTeamResponseServlet extends HttpServlet {
 
 		if(operation.equals("query")){
 			PrintWriter out  = response.getWriter();
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			ResultSet rs = Mysql.query("select * from AFJTeam where teamID='"+teamID+"'");
 			JSONArray ja = new JSONArray();
 			JSONObject jo = null;
@@ -82,16 +82,16 @@ public class AFJTeamResponseServlet extends HttpServlet {
 			Mysql.close();
 			
 		}else if(operation.equals("agree")){
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			Mysql.insert("insert into team_"+teamID+" values('"+teamID+"','"+teamName+"','"+teamCreater+"','"+teamCreaterName+"','"+member+"','"+memberName+"');");
-			Mysql.update("update users set teamID='"+teamID+"',teamName='"+teamName+"',teamCreater='"+teamCreater+"' where account='"+member+"'");
+			Mysql.update("update users set teamID='"+teamID+"',teamName='"+teamName+"',teamCreater='"+teamCreater+"',teamCreaterName='"+teamCreaterName+"' where account='"+member+"'");
 			Mysql.delect("delete from AFJTeam where account='"+member+"'");
 			Mysql.close();
 			
 			
 			
 		}else if(operation.equals("deny")){
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			Mysql.delect("delete from AFJTeam where account='"+member+"'");
 			Mysql.close();
 		}

@@ -32,9 +32,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
-//		Intent i = getIntent();
-//		account = i.getStringExtra("account");
-//		Log.i("tag", account);
 		noticesFg = new NoticesFragment();
 		fm = getFragmentManager();
 		ft = fm.beginTransaction();
@@ -99,16 +96,6 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
-	protected void onRestart() {
-		noticesFg = new NoticesFragment();
-		fm = getFragmentManager();
-		ft = fm.beginTransaction();
-		ft.replace(R.id.main_content, noticesFg);
-		ft.commit();
-		super.onRestart();
-	}
-
-	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
@@ -119,4 +106,7 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+
+	
 }

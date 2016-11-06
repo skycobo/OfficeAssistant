@@ -58,6 +58,9 @@
            android:name="com.lzz.officeassistant.review.EditReviewActivity">
         </activity>
         
+         <activity
+           android:name="com.lzz.officeassistant.review.ReviewItemActivity">
+        </activity>
         
 
     </application>

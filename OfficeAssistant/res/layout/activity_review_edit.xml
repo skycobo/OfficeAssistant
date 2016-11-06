@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+    
     <TextView 
         android:id="@+id/tv_review_type"
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/sn_review_type"
+        android:maxLength="20"
         android:hint="标题:"/>
     
     <EditText 
@@ -28,13 +30,15 @@
         android:layout_height="300dp"
         android:gravity="top"
         android:layout_below="@id/et_review_title"
+        android:maxLength="120"
         android:hint="正文:"/>
+    
     <Button 
-        android:id="@+id/b_review_send"
+        android:id="@+id/b_review_commit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/et_review_content"
-        android:text="发送"/>
+        android:text="提交"/>
 
 </RelativeLayout>

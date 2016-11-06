@@ -171,6 +171,9 @@ public class LoginActivity extends Activity {
 			if(jo.getString("teamCreater")!=null){
 				edit.putString("teamCreater", jo.getString("teamCreater"));
 			}
+			if(jo.getString("teamCreaterName")!=null){
+				edit.putString("teamCreaterName", jo.getString("teamCreaterName"));
+			}
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}finally{
@@ -179,7 +182,7 @@ public class LoginActivity extends Activity {
 			}
 			Log.i("tag", sp.getString("account", null)+"-"+sp.getString("pw", null)+"-"
 					+sp.getString("nickname", null)+"-"+sp.getString("teamID", null)+"-"+sp.getString("teamName", null)+"-"+
-					sp.getString("teamCreater", null));
+					sp.getString("teamCreater", null)+"-"+sp.getString("teamCreaterName", null));
 		}
 	}
 

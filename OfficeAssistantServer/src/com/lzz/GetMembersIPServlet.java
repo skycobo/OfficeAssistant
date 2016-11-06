@@ -64,7 +64,7 @@ public class GetMembersIPServlet extends HttpServlet {
 		membersArray.add(member);
 		List<Member> teamArray = new ArrayList<Member>();
 		
-		Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+		Mysql.connect("localhost", "oa", "oa", "123456");
 		ResultSet rs = Mysql.query("select * from team_"+teamID+";");
 		try {
 			while(rs.next()){

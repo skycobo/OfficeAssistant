@@ -48,18 +48,24 @@ public class RegisterServlet extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String nickname = request.getParameter("nickname");
 		if(account!=null&&pw!=null&&nickname!=null){
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			ResultSet rs = Mysql.query("select account from users;");
 			try {
-				while(rs.next()){
-					if(account.equals(rs.getString("account"))){
-						out.println("对不起，该邮箱已被使用!");
-						break;
-					}
-				}
-				if(rs.isAfterLast()){
+				if(!rs.next()){
 					Mysql.insert("insert into users(account,pw,nickname) values('"+account+"','"+pw+"','"+nickname+"')");
 					out.println("注册成功!");
+				}else{
+					rs.previous();
+					while(rs.next()){
+						if(account.equals(rs.getString("account"))){
+							out.println("对不起，该邮箱已被使用!");
+							break;
+						}
+					}
+					if(rs.isAfterLast()){
+						Mysql.insert("insert into users(account,pw,nickname) values('"+account+"','"+pw+"','"+nickname+"')");
+						out.println("注册成功!");
+					}
 				}
 	
 			} catch (SQLException e) {

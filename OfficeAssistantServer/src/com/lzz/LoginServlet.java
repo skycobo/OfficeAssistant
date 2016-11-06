@@ -47,24 +47,30 @@ public class LoginServlet extends HttpServlet {
 		String account = request.getParameter("account");
 		String pw = request.getParameter("pw");
 		if(account!=null&&pw!=null){
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			ResultSet rs = Mysql.query("select * from users;");
 			try {
-				while(rs.next()){
-					if(account.equals(rs.getString("account"))&&pw.equals(rs.getString("pw"))){
-						JSONObject jo = new JSONObject();
-						jo.put("account", rs.getString("account"));
-						jo.put("pw", rs.getString("pw"));
-						jo.put("nickname", rs.getString("nickname"));
-						jo.put("teamID",rs.getString("teamID"));
-						jo.put("teamName",rs.getString("teamName"));
-						jo.put("teamCreater",rs.getString("teamCreater"));
-						out.println(jo.toString());
-						break;
-					}
-				}
-				if(rs.isAfterLast()){
+				if(!rs.next()){
 					out.println("账号或密码错误!");
+				}else{
+					rs.previous();
+					while(rs.next()){
+						if(account.equals(rs.getString("account"))&&pw.equals(rs.getString("pw"))){
+							JSONObject jo = new JSONObject();
+							jo.put("account", rs.getString("account"));
+							jo.put("pw", rs.getString("pw"));
+							jo.put("nickname", rs.getString("nickname"));
+							jo.put("teamID",rs.getString("teamID"));
+							jo.put("teamName",rs.getString("teamName"));
+							jo.put("teamCreater",rs.getString("teamCreater"));
+							jo.put("teamCreaterName", rs.getString("teamCreaterName"));
+							out.println(jo.toString());
+							break;
+						}
+					}
+					if(rs.isAfterLast()){
+						out.println("账号或密码错误!");
+					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

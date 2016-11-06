@@ -51,7 +51,7 @@ public class CreateTeamServlet extends HttpServlet {
 		if(teamID!=null&&teamName!=null&&teamCreater!=null){
 			String sqlCreateTable = "create table team_"+teamID+"(teamID CHAR(5) NOT NULL,teamName CHAR(9) NOT NULL,"
 					+ "teamCreater CHAR(20) NOT NULL,teamCreaterName CHAR(9) NOT NULL,member CHAR(20),memberName CHAR(9))default character set=utf8;";
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			ResultSet rs =Mysql.showTables();
 			try{
 				while(rs.next()){
@@ -63,7 +63,7 @@ public class CreateTeamServlet extends HttpServlet {
 				if(rs.isAfterLast()){
 					Mysql.createTable(sqlCreateTable);
 					Mysql.insert("insert into team_"+teamID+" values('"+teamID+"','"+teamName+"','"+teamCreater+"','"+teamCreaterName+"','"+teamCreater+"','"+teamCreaterName+"');");
-					Mysql.update("update users set teamID='"+teamID+"',teamName='"+teamName+"',teamCreater='"+teamCreater+"' where account='"+teamCreater+"'");
+					Mysql.update("update users set teamID='"+teamID+"',teamName='"+teamName+"',teamCreater='"+teamCreater+"',teamCreaterName='"+teamCreaterName+"' where account='"+teamCreater+"'");
 					out.println("创建成功!");
 				}
 			}catch(SQLException se){

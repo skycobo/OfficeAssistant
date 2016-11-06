@@ -49,7 +49,7 @@ public class ApplyForJoinTeamServlet extends HttpServlet {
 		String nickname = request.getParameter("nickname");
 		
 		if(teamID!=null&&account!=null&&nickname!=null){
-			Mysql.connect("www.skycobo.com", "oa", "root", "sky132343");
+			Mysql.connect("localhost", "oa", "oa", "123456");
 			ResultSet rs =Mysql.showTables();
 			try{
 				while(rs.next()){
