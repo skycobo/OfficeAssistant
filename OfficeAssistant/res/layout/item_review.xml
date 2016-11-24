@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cornerbackground" >
+   
+    <TextView 
+        android:id="@+id/tv_itemReview_title"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <TextView 
+        android:id="@+id/tv_itemReview_requester"
+        android:layout_width="wrap_content"
+        android:padding="4dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemReview_title"/>
+    
+    <TextView 
+        android:id="@+id/tv_itemReview_Ctime"
+        android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemReview_requester"/>
+    
+    <TextView 
+        android:id="@+id/tv_itemReview_Rtime"
+        android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemReview_requester"/>
+    
+    <TextView
+        android:id="@+id/tv_itemReview_status"
+        android:paddingRight="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_itemReview_requester"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

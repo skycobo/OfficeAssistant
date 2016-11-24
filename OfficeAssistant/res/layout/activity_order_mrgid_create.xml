@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebecf0"
+    android:orientation="vertical" >
+    
+    <TextView 
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:background="#00BFFF"
+       android:textColor="#fff8f8ff"
+       android:gravity="center_vertical"
+       android:textSize="20dp"
+       android:text="创建会议室群"/>
+  
+   <EditText 
+       android:id="@+id/et_CreateMRGroupID_MRGroupID"
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:background="#ffffff"
+       android:singleLine="true"
+       android:paddingLeft="6dp"
+       android:layout_marginTop="15dp"
+       android:digits="@string/digit_letter"
+       android:maxLength="6"
+       android:hint="会议室群ID"/>
+   
+   <View 
+       android:id="@+id/v"
+       android:layout_width="fill_parent"
+       android:layout_height="1dp"
+       android:background="#ebecf0"/>
+   
+   <EditText
+       android:id="@+id/et_CreateMRGroupID_pw"
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:inputType="textPassword"
+       android:maxLength="6"
+       android:background="#ffffff"
+       android:paddingLeft="6dp"
+       android:hint="密码"/>
+   
+   <Button 
+       android:id="@+id/b_CreateMRGroupID_create"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/corner" 
+       android:textColor="#fff8f8ff" 
+       android:layout_margin="15dp"
+       android:layout_gravity="center_horizontal"
+       android:text="创建"/>
+   
+</LinearLayout>
+

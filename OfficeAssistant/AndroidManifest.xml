@@ -40,6 +40,7 @@
         <activity
            android:name="com.lzz.officeassistant.notices.EditNoticeActivity"
            android:label="编辑公告">
+             
         </activity>
         
          <activity
@@ -55,12 +56,45 @@
         </activity>
         
          <activity
-           android:name="com.lzz.officeassistant.review.EditReviewActivity">
+           android:name="com.lzz.officeassistant.review.ReviewEditActivity">
         </activity>
         
          <activity
-           android:name="com.lzz.officeassistant.review.ReviewItemActivity">
+           android:name="com.lzz.officeassistant.review.ReviewDetailActivity">
         </activity>
+        
+        <activity
+           android:name="com.lzz.officeassistant.review.ReviewHandleActivity">
+        </activity>
+        
+        <activity
+           android:name="com.lzz.officeassistant.review.ReviewHandleOverActivity">
+        </activity>
+        
+         <activity
+           android:name="com.lzz.officeassistant.order.InputMeetingRoomVerifyActivity">
+        </activity>
+        
+          <activity
+           android:name="com.lzz.officeassistant.order.CreateMeetingRoomGroupIDActivity">
+        </activity>
+        
+        <activity
+           android:name="com.lzz.officeassistant.order.InputMeetingRoomInfo">
+        </activity>
+        
+         <activity
+           android:name="com.lzz.officeassistant.order.ShowMeetingRoomActivity">
+        </activity>
+        
+        <activity
+           android:name="com.lzz.officeassistant.order.ShowMeetingRoomDetailActivity">
+        </activity>
+        
+        <activity
+           android:name="com.lzz.officeassistant.order.OrderMeetingRoomActivity">
+        </activity>
+        
         
 
     </application>

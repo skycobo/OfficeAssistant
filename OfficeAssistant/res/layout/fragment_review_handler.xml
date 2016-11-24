@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_review_handler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ebecf0">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:background="#0099FF"
-        android:text="审批"
-        android:textColor="#fff8f8ff"
-        android:textSize="20sp" />
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="未处理"/>
+        android:layout_height="45dp"
+        android:background="#00BFFF" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:background="#00BFFF"
+            android:gravity="center"
+            android:text="审批"
+            android:textColor="#fff8f8ff"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/b_rh_over"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3.5dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/review3" />
+
+    </RelativeLayout>
     
     <ListView 
       android:id="@+id/lv_review_handler_wait"
       android:layout_width="match_parent"
-	  android:layout_height="wrap_content">
+	  android:layout_height="match_parent"
+	  android:layout_margin="8dp"
+	  android:divider="#ebecf0"
+	  android:dividerHeight="8dp">
 	</ListView>
     
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="已处理"/>
-     
-    <ListView 
-      android:id="@+id/lv_review_handler_over"
-      android:layout_width="match_parent"
-	  android:layout_height="wrap_content">
-	</ListView>
-
 </LinearLayout>

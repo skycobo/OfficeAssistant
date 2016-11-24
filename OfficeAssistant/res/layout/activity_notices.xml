@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="500dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ebecf0" >
   
   <com.lzz.officeassistant.notices.AddTitleLayout 
       android:layout_width="match_parent"
@@ -14,7 +15,10 @@
   <ListView 
       android:id="@+id/lv_notices"
       android:layout_width="match_parent"
-	  android:layout_height="match_parent">
+	  android:layout_height="match_parent"
+	  android:layout_margin="8dp"
+	  android:divider="#ebecf0"
+	  android:dividerHeight="8dp">
 
   </ListView>
 </LinearLayout>

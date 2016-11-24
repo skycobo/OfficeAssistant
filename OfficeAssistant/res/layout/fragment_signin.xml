@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ebecf0">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#1FBAF3" >
     <TextView 
         android:id="@+id/tv_signin_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0099FF"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="#1FBAF3"
         android:textColor="#fff8f8ff"
         android:gravity="center"/>
-     <Button 
-        android:id="@+id/b_signin"
-        android:layout_width="160.0dip" 
-        android:layout_height="wrap_content" 
-        android:background="@drawable/corner" 
-        android:textColor="#fff8f8ff" 
-      	android:layout_alignParentBottom="true"
-      	android:layout_centerHorizontal="true"
-   		android:text="签到"
-        />
+    <Button
+	    android:id="@+id/b_signin"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginTop="10dp"
+	    android:background="@drawable/signinbtn" />
+    </RelativeLayout>
+    
     
     <ListView 
       android:id="@+id/lv_signin_list"
       android:layout_width="match_parent"
-	  android:layout_height="wrap_content"
-	  android:layout_below="@id/tv_signin_time"
-	  android:layout_above="@id/b_signin"
+	  android:layout_height="match_parent"
+	  android:layout_margin="8dp"
+	  android:divider="#ebecf0"
+	  android:dividerHeight="8dp"
 	  >
   	</ListView>
   	
    
     
 
-</RelativeLayout>
+</LinearLayout>

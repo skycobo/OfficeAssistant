@@ -79,7 +79,7 @@ public class SignInFragment extends Fragment {
 				break;
 			case 1:
 				signInInfoArray = (List<SignInInfo>) msg.obj;
-				SignInAdapter adapter = new SignInAdapter(view.getContext(), R.layout.signin_item,signInInfoArray);
+				SignInAdapter adapter = new SignInAdapter(view.getContext(), R.layout.item_signin,signInInfoArray);
 				lv_signin_list = (ListView) view.findViewById(R.id.lv_signin_list);
 				lv_signin_list.setAdapter(adapter);
 			}

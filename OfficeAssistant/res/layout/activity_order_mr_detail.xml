@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebecf0"
+    android:orientation="vertical" >
+    
+     <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF"
+        android:textColor="#fff8f8ff"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:text="会议室详情"/>
+    
+     <TextView 
+         android:id="@+id/tv_mrDetail_name"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_location"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_floor"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_accommodate"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_wifi"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_projector"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:id="@+id/tv_mrDetail_othersSupport"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"/>
+     
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+     <TextView 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="已有预约:"/>
+   
+     <TextView 
+         android:id="@+id/tv_mrDetail_teamtime"
+         android:layout_width="match_parent"
+         android:layout_height="100dp"
+         android:background="#ffffff"/>
+    
+     
+       <Button 
+        android:id="@+id/b_orderMR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner" 
+        android:textColor="#fff8f8ff" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_login_pw"
+        android:layout_margin="15dp"
+        android:text="预约"/>
+
+</LinearLayout>

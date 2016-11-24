@@ -18,6 +18,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -46,7 +47,7 @@ public class NoticesFragment extends Fragment {
 			Log.i("tag", (msg.obj==null)+"");
 			if(msg.obj!=null){
 				noticesArray = (List<Notice>) msg.obj;
-				NoticeAdapter adapter = new NoticeAdapter(view.getContext(), R.layout.notice_item, noticesArray);
+				NoticeAdapter adapter = new NoticeAdapter(view.getContext(), R.layout.item_notice, noticesArray);
 				lv_notices = (ListView) view.findViewById(R.id.lv_notices);
 				lv_notices.setAdapter(adapter);
 				lv_notices.setOnItemClickListener(new OnItemClickListener() {
@@ -68,7 +69,12 @@ public class NoticesFragment extends Fragment {
 
 	@Override
 	public void onStart() {
-		sp=getActivity().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+		sp=getActivity().getSharedPreferences("currentUser", Context.MODE_PRIVATE);
+		String currentUser = sp.getString("account", null);
+		sp=getActivity().getSharedPreferences(currentUser, Context.MODE_PRIVATE);
+		Editor e = sp.edit();
+		e.putInt("noticeCounter", 0);
+		e.commit();
 		title_text = (TextView) view.findViewById(R.id.title_text);
 		title_text.setText("公告");
 		title_add=(Button) view.findViewById(R.id.title_add);

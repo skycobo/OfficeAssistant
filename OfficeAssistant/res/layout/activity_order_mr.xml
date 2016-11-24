@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebecf0"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF"
+        android:textColor="#fff8f8ff"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:text="预约会议室"/>
+    
+    <EditText 
+        android:id="@+id/et_orderMR_topic"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:singleLine="true"
+        android:paddingLeft="6dp"
+        android:layout_marginTop="15dp"
+        android:hint="议题"/>
+    
+      <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    
+    <EditText 
+        android:id="@+id/et_orderMR_startTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:paddingLeft="6dp"
+        android:singleLine="true"
+        android:hint="会议开始时间"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    
+     <EditText 
+        android:id="@+id/et_orderMR_endTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:paddingLeft="6dp"
+        android:singleLine="true"
+        android:hint="会议结束时间"/>
+     
+     <Button
+        android:id="@+id/b_orderMR_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner" 
+        android:textColor="#fff8f8ff" 
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="确定预约" />
+     
+     
+</LinearLayout>

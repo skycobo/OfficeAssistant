@@ -27,6 +27,7 @@ import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -52,7 +53,12 @@ public class LoginActivity extends Activity {
 				Toast.makeText(LoginActivity.this, response, 0).show();
 			}else{
 				Toast.makeText(LoginActivity.this, "登陆成功!", 0).show();
-				saveUserInfo(response);
+				sp = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
+				Editor edit = sp.edit();
+				edit.putString("account", et_login_account.getText().toString());
+				edit.putString("pw", et_login_pw.getText().toString());
+				edit.commit();
+				saveUserInfo(response,et_login_account.getText().toString());
 					Intent i = new Intent(LoginActivity.this,MainActivity.class);
 					startActivity(i);
 				}
@@ -63,6 +69,7 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_login);
 		
 		//findViewById()...
@@ -70,10 +77,9 @@ public class LoginActivity extends Activity {
 		et_login_pw = (EditText) findViewById(R.id.et_login_pw);
 		tv_login_register = (TextView) findViewById(R.id.tv_login_register);
 		b_login_login = (Button)findViewById(R.id.b_login_login);
-		cb_login_remberPw = (CheckBox)findViewById(R.id.cb_login_remberPw);
 		
 		//回显账号和密码
-		sp = getSharedPreferences("accountPw", Context.MODE_PRIVATE);
+		sp = getSharedPreferences("currentUser", Context.MODE_PRIVATE);
 		et_login_account.setText(sp.getString("account", null));
 		et_login_pw.setText(sp.getString("pw", null));
 		
@@ -98,14 +104,6 @@ public class LoginActivity extends Activity {
 				if(!et_login_account.getText().toString().equals("")){
 					if(!et_login_pw.getText().toString().equals("")){
 						httpLogin();
-						//记住账号和密码
-						if(cb_login_remberPw.isChecked()){
-							sp = getSharedPreferences("accountPw", Context.MODE_PRIVATE);
-							Editor edit = sp.edit();
-							edit.putString("account", et_login_account.getText().toString());
-							edit.putString("pw", et_login_pw.getText().toString());
-							edit.commit();
-						}
 					}else{
 						Toast.makeText(LoginActivity.this, "密码不能为空!", 0).show();
 					}
@@ -147,17 +145,12 @@ public class LoginActivity extends Activity {
 			}}
 		).start();
 	}
-	private void saveUserInfo(String jsonData){
+	private void saveUserInfo(String jsonData,String account){
 		JSONObject jo = null;
 		Editor edit = null;
 		try {
 			jo = new JSONObject(jsonData);
-//			Log.i("tag",jo.getString("account")+"-"+jo.getString("pw")+"-"+jo.getString("nickname")+"-"+jo.getString("teamID")
-//			+"-"+jo.getString("teamName")+"-"+jo.getString("teamCreater"));
-			sp = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-			edit = sp.edit();
-			edit.clear().commit();
-			sp = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+			sp = getSharedPreferences(account, Context.MODE_PRIVATE);
 			edit = sp.edit();
 			edit.putString("account", jo.getString("account"));
 			edit.putString("pw", jo.getString("pw"));
@@ -180,9 +173,6 @@ public class LoginActivity extends Activity {
 			if(edit!=null){
 				edit.apply();
 			}
-			Log.i("tag", sp.getString("account", null)+"-"+sp.getString("pw", null)+"-"
-					+sp.getString("nickname", null)+"-"+sp.getString("teamID", null)+"-"+sp.getString("teamName", null)+"-"+
-					sp.getString("teamCreater", null)+"-"+sp.getString("teamCreaterName", null));
 		}
 	}
 

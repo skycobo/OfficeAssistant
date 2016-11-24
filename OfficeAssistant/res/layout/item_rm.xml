@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cornerbackground"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/tv_itemRM_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:text="会议室名称:"/>
+    
+     <TextView 
+        android:id="@+id/tv_itemRM_accommodate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:text="容纳人数:"/>
+     
+      <TextView 
+        android:id="@+id/tv_itemRM_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingBottom="4dp"
+        android:text="具体位置:"/>
+      
+</LinearLayout>

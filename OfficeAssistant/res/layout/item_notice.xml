@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/cornerbackground" >
   
     <TextView 
         android:id="@+id/tv_notice_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="7dp"
         android:layout_centerHorizontal="true"/>
     <TextView 
         android:id="@+id/tv_notice_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="7dp"
         android:maxLines="1"
         android:layout_below="@id/tv_notice_title"/>
     <TextView
         android:id="@+id/tv_notice_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingRight="7dp"
         android:layout_below="@id/tv_notice_content"
         android:layout_alignParentRight="true"/>
     <TextView
         android:id="@+id/tv_notice_flag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingRight="7dp"
+        android:paddingBottom="7dp"
         android:layout_below="@id/tv_notice_time"
         android:layout_alignParentRight="true"
         android:textColor="#FF0033"

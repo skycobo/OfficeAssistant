@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:orientation="vertical"
+    android:background="#ebecf0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:background="#00BFFF"
+            android:gravity="center"
+            android:text="会议室"
+            android:textColor="#fff8f8ff"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/b_show_orderedMR"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3.5dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/review3" />
+
+    </RelativeLayout>
+    
+    <ListView 
+      android:id="@+id/lv_show_mr"
+      android:layout_width="match_parent"
+	  android:layout_height="match_parent"
+	  android:layout_margin="8dp"
+	  android:divider="#ebecf0"
+	  android:dividerHeight="8dp">
+	</ListView>
+    
+</LinearLayout>

@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#ebecf0" >
+    
+    <TextView 
+        android:id="@+id/tv_me_me"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#1FBAF3"
+        android:textColor="#fff8f8ff"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="我"/>
+    
+    <ImageView 
+        android:id="@+id/iv_me_headphoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/tv_me_me"
+        android:background="@drawable/circular"
+        android:src="@drawable/dog"/>
     
     <TextView 
         android:id="@+id/tv_me_vNickname"
     	android:layout_width="wrap_content"
    	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/iv_me_headphoto"
    	    android:text="名字:"/>
     <TextView 
         android:id="@+id/tv_me_nickname"
     	android:layout_width="wrap_content"
    	    android:layout_height="wrap_content"
+   	    android:layout_below="@id/iv_me_headphoto"
    	    android:layout_toRightOf="@id/tv_me_vNickname"
    	    android:text="名字"/>
       <TextView 
@@ -58,6 +79,6 @@
    	       android:layout_below="@id/b_me_createTeam"
    	       android:text="加入团队"
    	       />
-
+      
       
 </RelativeLayout>

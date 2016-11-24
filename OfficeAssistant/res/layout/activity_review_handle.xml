@@ -2,7 +2,107 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ebecf0">
     
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF"
+        android:textColor="#fff8f8ff"
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        android:text="审批处理"/>
+    
+    <TextView
+        android:id="@+id/tv_rh_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="4dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"/>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    
+      <TextView
+        android:id="@+id/tv_rh_type"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="4dp"
+        android:gravity="center_vertical"
+        android:background="#ffffff"/>
+      
+      <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+      <TextView
+        android:id="@+id/tv_rh_requester"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:layout_height="45dp"
+        android:background="#ffffff"/>
+      
+      <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+      
+      <TextView
+        android:id="@+id/tv_rh_commitTime"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="45dp"
+        android:paddingLeft="4dp"
+        android:background="#ffffff"/>
+      
+      <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+       
+     <TextView
+        android:id="@+id/tv_rh_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="4dp"
+        android:layout_marginBottom="15dp"
+        android:background="#ffffff"/>
+    
+    <EditText 
+        android:id="@+id/et_rh_idea"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="top"
+        android:padding="4dp"
+        android:background="@drawable/cornerbackground"
+        android:hint="请输入审批意见..."/>
+    
+    <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+	    <Button 
+	        android:id="@+id/b_rh_disagree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/et_rh_idea"
+	        android:background="@drawable/disagree"
+	        android:textColor="#fff8f8ff"
+	        android:layout_margin="15dp"
+	        android:text="否决"/>
+	    
+	    <Button 
+	        android:id="@+id/b_rh_agree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/agree"
+	        android:textColor="#fff8f8ff"
+	        android:layout_marginTop="15dp"
+	        android:text="同意"/>
+    </LinearLayout>
+        
 
 </LinearLayout>

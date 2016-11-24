@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebecf0"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#00BFFF"
+        android:textColor="#fff8f8ff"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:text="审批详情"/>
+    
+    <TextView
+        android:id="@+id/tv_reviewDetail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    
+    <TextView
+        android:id="@+id/tv_reviewDetail_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/> ` 
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+     
+    <TextView
+        android:id="@+id/tv_reviewDetail_requester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+      
+    <TextView
+        android:id="@+id/tv_reviewDetail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+       
+    <TextView
+        android:id="@+id/tv_reviewDetail_commitTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+      
+    <TextView
+        android:id="@+id/tv_reviewDetail_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+      
+    <TextView
+        android:id="@+id/tv_reviewDetail_idea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+       
+    <TextView
+        android:id="@+id/tv_reviewDetail_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+     <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+      
+    <TextView
+        android:id="@+id/tv_reviewDetail_responseTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+    
+</LinearLayout>
